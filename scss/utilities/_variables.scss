@@ -1,8 +1,32 @@
+//----- Descriptive Base Colors -----//
+$black           : #000;
+$gray            : #808080;
+$viking          : #58e1c1;
+$malibu          : #51ddfc;
+$emerald         : #63CC82;
+$sunglo          : #E4757A;
+$coral           : #FD7856;
+$purple-majesty  : #927BC1;
+$riptide         : #80E8D1;
+$shakespeare     : #3FABCA;
+$anakiwa         : #7EE6FD;
+$french-lilac    : #DEB2EE;
+$vista-blue      : #88D9A0;
+$sea-pink        : #EC9FA3;
+$vivid-tangerine : #FD9F85;
+
+//----- Color Usage -----//
+
+$color-primary   : $viking;
+$color-secondary : $malibu;
+
 //----- Fonts -----//
 
+$font-family--primary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-color--primary   : lighten($black, 10%);
 
 
 //----- Breakpoints -----//
-
-
-//----- Colors -----//
+$brkpoint-sm    : 1px;
+$brkpoint-md    : 768px;
+$brkpoint-lg    : 1100px;

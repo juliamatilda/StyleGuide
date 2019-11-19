@@ -5,6 +5,15 @@
 	box-sizing: border-box;
 }
 
+.container {
+	font-family: $font-family--primary;
+	font-weight: 300;
+	color: $font-color--primary;
+	letter-spacing: 0.5px;
+	width:100%;
+	text-align: center;
+}
+
 ul  {
 
 }
