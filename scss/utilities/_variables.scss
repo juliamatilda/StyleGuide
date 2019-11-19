@@ -19,14 +19,18 @@ $vivid-tangerine : #FD9F85;
 
 $color-primary   : $viking;
 $color-secondary : $malibu;
+$color-text      : lighten($black, 10%);
 
 //----- Fonts -----//
 
 $font-family--primary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-color--primary   : lighten($black, 10%);
+
+
+//----- Layout -----//
+$max-width : 1000px;
 
 
 //----- Breakpoints -----//
-$brkpoint-sm    : 1px;
-$brkpoint-md    : 768px;
-$brkpoint-lg    : 1100px;
+$breakpoint-sm    : 1px;
+$breakpoint-md    : 768px;
+$breakpoint-lg    : 1100px;
