@@ -1,8 +1,24 @@
 
-.container {}
+.container {
+
+}
 
 
-.link {}
+
+.link {
+  @extend %text-decor-none;
+  font-weight: $font-wt--bold;
+  color: $color-secondary;
+}
+
 .blockquote {}
-.headline--primary {}
-.headline--secondary {}
+
+.headline {
+  &-primary {
+    @extend %headline-prim;
+  }
+
+  &-secondary {
+    }
+
+}

@@ -1,20 +1,23 @@
 
 .container {
-  @include center(90%);
-  color: $color-text;
+  @include flexbox($direction: column, $justifyContent: center);
+  @include center(85%);
   font-family: $font-family--primary;
-
-  //font-weight: 300;
-  //letter-spacing: 0.5px;
-
+  font-size: $base__font-size;
+  color: lighten($gray, 10%);
 }
 
 .grid__row {
-  
 
 }
+
+//----- Grid columns -----//
 // .grid__col--2 {}
-// .grid__col--3 {}
+
+// .grid__col--3 {
+
+// }
+
 // .grid__col--4 {}
 // .grid__col--5 {}
 // .grid__col--6 {}

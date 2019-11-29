@@ -1,6 +1,20 @@
+//----- Font Stack -----//
+
+$font-url: 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+//----- Font Weight -----//
+$font-wt--thin: 100;
+$font-wt--light: 300;
+$font-wt--medium: 400;
+$font-wt--bold: 700;
+$font-wt--ultra-bold: 900;
+
 //----- Descriptive Base Colors -----//
 $black           : #000;
-$gray            : #808080;
+$gray            : #404040;
+$white           : #fff;
+
 $viking          : #58e1c1;
 $malibu          : #51ddfc;
 $emerald         : #63CC82;
@@ -19,15 +33,17 @@ $vivid-tangerine : #FD9F85;
 
 $color-primary   : $viking;
 $color-secondary : $malibu;
-$color-text      : lighten($black, 10%);
 
-//----- Fonts -----//
+//----- Text -----//
+$base__font-size : 16px;
+$base__line-height : 24px;
 
-$font-family--primary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-
-//----- Layout -----//
-$max-width : 1000px;
+//----- Grid -----//
+$g-col-width   : 65px;
+$-col-count    : 12;
+$g-gutter-width: 20px;
+$max-width     : 1050px;
 
 
 //----- Breakpoints -----//

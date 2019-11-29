@@ -1,3 +1,15 @@
+.link, .nav__item a {
+  text-decoration: none;
+}
+
+.headline-primary {
+  color: #58e1c1;
+}
+
+.nav__item {
+  text-align: center;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -340,15 +352,60 @@ template {
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 24px;
+}
+
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav__item a {
+  display: block;
+  padding: 1em;
+  color: #404040;
+}
+.nav__item a:active, .nav__item a:hover {
+  background-color: #58e1c1;
+  border: 1px solid #58e1c1;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+}
+
+.img--logo {
+  padding-top: 50px;
+  padding-bottom: 30px;
 }
 
 .container {
-  width: 90%;
-  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
-  color: #1a1a1a;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #5a5a5a;
+}
+
+.link {
+  font-weight: 700;
+  color: #51ddfc;
 }
 
 /*# sourceMappingURL=styles.css.map */

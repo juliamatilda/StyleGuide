@@ -1,9 +1,18 @@
 //----- Links -----//
-
+%text-decor-none {
+  text-decoration: none;
+}
 
 //----- Images -----//
 
 //----- Headlines -----//
+%headline-prim {
+  color: $color-primary;
+}
+
 
 
 //----- Nav Items -----//
+%text-center {
+  text-align: center;
+}
