@@ -8,10 +8,24 @@
 }
 
 .grid__row {
-
+  @include flexbox($direction: column, $justifyContent: center);
 }
 
 //----- Grid columns -----//
+//generate grid__col classes, set background colors
+@for $num from 2 through 12 {
+  .grid__col--#{$num} {
+    @include grid;
+    @if map-has-key($grid-colors, #{$num}) {
+      &.theme__colors {
+        background-color: map-get($grid-colors, #{$num});
+      }
+    }
+  }
+}
+
+
+
 // .grid__col--2 {}
 
 // .grid__col--3 {

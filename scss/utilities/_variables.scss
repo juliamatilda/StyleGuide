@@ -1,7 +1,8 @@
+
+//======================== FONT ==========================//
 //----- Font Stack -----//
 
-$font-url: 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
-$font-family--primary: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--primary: "Neue Helvetica", Helvetica, sans-serif;
 
 //----- Font Weight -----//
 $font-wt--thin: 100;
@@ -10,29 +11,53 @@ $font-wt--medium: 400;
 $font-wt--bold: 700;
 $font-wt--ultra-bold: 900;
 
+
+//======================== COLORS ==========================//
 //----- Descriptive Base Colors -----//
 $black           : #000;
 $gray            : #404040;
 $white           : #fff;
 
-$viking          : #58e1c1;
-$malibu          : #51ddfc;
-$emerald         : #63CC82;
-$sunglo          : #E4757A;
-$coral           : #FD7856;
-$purple-majesty  : #927BC1;
-$riptide         : #80E8D1;
-$shakespeare     : #3FABCA;
-$anakiwa         : #7EE6FD;
-$french-lilac    : #DEB2EE;
-$vista-blue      : #88D9A0;
-$sea-pink        : #EC9FA3;
-$vivid-tangerine : #FD9F85;
+$viking          : #58e1c1; //main
+$malibu          : #51ddfc; //login/default btn/link
+$emerald         : #63CC82; //success btn
+$sunglo          : #E4757A; //error btn
+$coral           : #FD7856; //warning btn
+$purple-majesty  : #927BC1; //info btn
+$riptide         : #80E8D1; //grid__col--12
+$shakespeare     : #3FABCA; //grid__col--6
+$anakiwa         : #7EE6FD; //grid__col--4
+$french-lilac    : #DEB2EE; //grid__col--3
+$vista-blue      : #88D9A0; //grid__col--5
+$sea-pink        : #EC9FA3; //grid__col--7
+$vivid-tangerine : #FD9F85; //grid__col--8
 
-//----- Color Usage -----//
+//----- Base Colors -----//
+$primary-color     : $viking;
+$secondary-color   : $malibu;
 
-$color-primary   : $viking;
-$color-secondary : $malibu;
+
+//----- Theme Colors -----//
+$grid-colors: (
+    '3' : $french-lilac,    //grid__col--3
+    '4' : $anakiwa,         //grid__col--4
+    '5' : $vista-blue,      //grid__col--5
+    '6' : $shakespeare,     //grid__col--6
+    '7' : $sea-pink,        //grid__col--7
+    '8' : $vivid-tangerine, //grid__col--8
+    '12':$riptide          //grid__col--12
+);
+
+//----- Btn Colors -----//
+$btn-colors: (
+    success    : $emerald,
+    error      : $sunglo,
+    warning    : $coral,
+    info       : $purple-majesty,
+    default    : $malibu,
+);
+
+//==================================================================//
 
 //----- Text -----//
 $base__font-size : 16px;

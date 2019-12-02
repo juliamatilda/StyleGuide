@@ -7,8 +7,8 @@
 
 .link {
   @extend %text-decor-none;
-  font-weight: $font-wt--bold;
-  color: $color-secondary;
+  font-weight: $font-wt--medium;
+  color: $secondary-color;
 }
 
 .blockquote {}
