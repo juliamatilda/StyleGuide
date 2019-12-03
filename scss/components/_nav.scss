@@ -1,25 +1,7 @@
-//----- Navigation -----//
-// .nav {
-// @include flexbox($direction: column);
-//   padding-left: 0;
-//
-//   @include e(item) {
-//     @extend %text-center;
-//     padding: em(12px) em(12px);
-//     border-radius: 5px;
-//
-//     a {
-//      @extend %text-decor-none;
-//     }
-//   }
-//
-// }
 
 .nav {
+  @extend %text-center;
   @include e(item) {
-    @include flexbox($direction: column, $justifyContent: center);
-    @extend %text-center;
-
     a {
       @extend %text-decor-none;
        display: block;
@@ -35,3 +17,33 @@
      }
     }
 }
+
+
+
+
+
+
+
+
+
+//
+// .nav {
+//   @include e(item) {
+//     @include flexbox($direction: column, $justifyContent: center);
+//     @extend %text-center;
+//
+//     a {
+//       @extend %text-decor-none;
+//        display: block;
+//        padding: em(16px);
+//        color: $gray;
+//        &:active,
+//        &:hover {
+//          background-color: $primary-color;
+//          border: 1px solid $primary-color;
+//          border-radius: 5px;
+//          color: $white;
+//        }
+//      }
+//     }
+// }

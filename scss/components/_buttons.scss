@@ -1,6 +1,16 @@
-.btn--default {}
-.btn--success {}
-.btn--error {}
-.btn--warning {}
-.btn--info {}
-.theme__colors {}
+//set btn theme colors
+.btn {
+  @include m(default){
+    margin-top: em(30px);
+  }
+  @each $theme, $color in $btn-colors {
+    &--#{$theme}.theme__colors {
+      background-color: $color;
+    }
+  }
+}
+
+//extend btn styles
+[class^="btn--"] {
+  @extend %btn;
+}

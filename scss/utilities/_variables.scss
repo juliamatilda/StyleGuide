@@ -37,14 +37,15 @@ $primary-color     : $viking;
 $secondary-color   : $malibu;
 
 
-//----- Theme Colors -----//
+//----- COLOR MAPS -----//
+//----- Grid Theme Colors -----//
 $grid-colors: (
-    '3' : $french-lilac,    //grid__col--3
-    '4' : $anakiwa,         //grid__col--4
-    '5' : $vista-blue,      //grid__col--5
-    '6' : $shakespeare,     //grid__col--6
-    '7' : $sea-pink,        //grid__col--7
-    '8' : $vivid-tangerine, //grid__col--8
+    '3' :$french-lilac,    //grid__col--3
+    '4' :$anakiwa,         //grid__col--4
+    '5' :$vista-blue,      //grid__col--5
+    '6' :$shakespeare,     //grid__col--6
+    '7' :$sea-pink,        //grid__col--7
+    '8' :$vivid-tangerine, //grid__col--8
     '12':$riptide          //grid__col--12
 );
 
@@ -54,7 +55,7 @@ $btn-colors: (
     error      : $sunglo,
     warning    : $coral,
     info       : $purple-majesty,
-    default    : $malibu,
+    default    : $malibu
 );
 
 //==================================================================//
@@ -66,7 +67,7 @@ $base__line-height : 24px;
 
 //----- Grid -----//
 $g-col-width   : 65px;
-$-col-count    : 12;
+$g-col-count   : 12;
 $g-gutter-width: 20px;
 $max-width     : 1050px;
 

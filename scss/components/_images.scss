@@ -1,11 +1,20 @@
-.link {
-  @include flexbox($justifyContent: center );
 
-}
+.img {
+  @include m(logo){
+  @extend %margin-auto;
+    display: block;
+    padding: em(45px) 0;
+  }
 
-.img--logo {
-  padding-top: 50px;
-  padding-bottom: 30px;
+  @include m(frame){
+    padding: em(15px);
+    border: solid 1px lighten($gray, 50%);
+    width: 100%;
+  }
+
+  @include m(avatar){
+    @extend %margin-auto;
+      display: block;
+      padding: em(30px) 0;
+  }
 }
-.img--frame {}
-.img--avatar {}

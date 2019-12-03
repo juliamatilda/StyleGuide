@@ -42,10 +42,12 @@
 @mixin flexbox(
   $display: flex,
   $direction: null,
-  $justifyContent: null) {
+  $justify: null,
+  $align: null) {
    display: $display;
    flex-direction: $direction;
-   justify-content:  $justifyContent;
+   justify-content:  $justify;
+   align-items: $align;
    @content;
 }
 
@@ -53,14 +55,16 @@
 @mixin grid {
   @include flexbox;
   border-radius: em(5px);
+  border: none;
   color: $gray;
-  font-weight: $font-wt--bold;
+  padding: .9em 0 .9em em(15px);
+  @content;
 }
+
 
 //----- Center helper -----//
 @mixin center($width) {
   width: $width;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   @content;
 }

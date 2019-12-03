@@ -1,11 +1,5 @@
 //Variables
-@import "variables";
-
-//Functions
-@import "functions";
-
-//Mixins
-@import "mixins";
-
-//Placeholders
-@import "placeholders";
+@import "variables",
+        "functions",
+        "mixins",
+        "placeholders";
