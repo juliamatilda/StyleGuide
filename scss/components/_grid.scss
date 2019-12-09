@@ -1,6 +1,6 @@
 
 .container {
-  @include center(85%);
+  @include center(80%);
   font-family: $font-family--primary;
   font-size: $base__font-size;
   color: lighten($gray, 10%);
@@ -19,6 +19,14 @@
       &.theme__colors {
         background-color: map-get($grid-colors, #{$i});
         @include grid;
+
+        //margin grid
+         @include media(small){
+           margin-bottom: em(5px);
+           &:last-child {
+             margin-bottom: em(40px);
+          }
+        }
 
       }
     }

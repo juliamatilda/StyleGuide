@@ -10,7 +10,17 @@
   color: $secondary-color;
 }
 
-.blockquote {}
+.blockquote {
+  @include center(80%);
+  display: block;
+  font-size: em(24px);
+  font-style: italic;
+  border-left: 8px solid $primary-color;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 0 10px;
+  margin: 20px;
+}
 
 .headline {
   &-primary {

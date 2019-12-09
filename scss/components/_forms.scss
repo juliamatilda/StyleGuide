@@ -1,3 +1,14 @@
-.form {}
-.form__label--hidden {}
-.form__input {}
+.form {
+    @include e(label) {
+        @include m(hidden) {
+            visibility: hidden;
+        }
+    }
+    @include e(input){
+      @include center(80%);
+      border: none;
+      border-bottom: 2px solid $primary-color;
+      padding: em(12px);
+    }
+
+  }
