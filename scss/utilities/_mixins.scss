@@ -54,13 +54,24 @@
 //----- Grid Style -----//
 @mixin grid {
   @include flexbox;
-  border-radius: em(5px);
+  border-radius: 5px;
   border: none;
-  color: $gray;
-  padding: .9em 0 .9em em(15px);
+  font-size: em(16px);
+  color: palette(grey, x-light);;
+  font-weight: $font-wt--medium;
+  padding: em(15px) em(13px) em(15px);
   @content;
 }
 
+//Grid background-color//
+@mixin grid-bg-color {
+  @each $color in $grid-colors {
+    $index: index($grid-colors, $color);
+    &--#{$index}.theme__colors {
+      background-color: $color;
+    }
+  }
+}
 
 //----- Center helper -----//
 @mixin center($width) {

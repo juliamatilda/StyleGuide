@@ -7,30 +7,40 @@
     margin: 0 auto;
 }
 
-//----- Links -----//
+//----- Links/ -----//
 %text-decor-none {
   text-decoration: none;
 }
 
-//----- Images -----//
-
 //----- Headlines -----//
 %headline-prim {
   color: $primary-color;
+  font-weight: $font-wt--bold;
+  font-size: em(32px);
+  line-height: (36px/32px);
+  margin: 0 0 em(20px) em(15px);
 }
 
+%headline-sec {
+  font-weight: $font-wt--thin;
+  color: palette(grey, xx-light);
+  margin: em(40px) 0 0 em(15px);
+  padding-bottom: em(20px);
+}
 
-
-//----- Nav Items -----//
-
-
-
+//----- Navigation ------//
+%nav-item-on {
+  background-color: $primary-color;
+  border-radius: 5px;
+  color: $white;
+  font-weight: $font-wt--medium;
+}
 
 
 //----- Buttons ------//
 %btn {
-  width: 100%;
-  padding: 0.75em 0;
+  @include center(95%);
+  padding: em(13px) 0;
   font-family: $font-family--primary;
   font-weight: $font-wt--medium;
   text-transform: uppercase;
@@ -38,7 +48,6 @@
   border: none;
   border-radius: 5px;
   @include flexbox($direction: column, $align: center){
-    margin-bottom: em(20px);
   }
 
 

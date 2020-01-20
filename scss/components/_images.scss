@@ -7,14 +7,18 @@
   }
 
   @include m(frame){
+    @extend %margin-auto;
+    display: block;
     padding: em(15px);
-    border: solid 1px lighten($gray, 50%);
-    width: 100%;
+    border: solid 1px palette(grey, xx-light);
+    width: 90%;
+    margin-top: em(60px);
+    margin-bottom: em(30px);
   }
 
   @include m(avatar){
     @extend %margin-auto;
       display: block;
-      padding: em(30px) 0;
+
   }
 }

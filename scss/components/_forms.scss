@@ -1,14 +1,20 @@
 .form {
+    padding-bottom: em(10px);
     @include e(label) {
         @include m(hidden) {
             visibility: hidden;
         }
     }
     @include e(input){
-      @include center(80%);
+      @include flexbox($justify: center);
+      @include center(90%);
       border: none;
-      border-bottom: 2px solid $primary-color;
+      border-bottom: em(6px) solid $primary-color;
       padding: em(12px);
-    }
+      outline: none;
+      }
 
-  }
+    .headline--secondary {
+      padding-left: em(20px);
+    }
+}

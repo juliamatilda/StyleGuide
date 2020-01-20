@@ -1,6 +1,5 @@
 
 .container {
-
 }
 
 
@@ -8,26 +7,40 @@
 .link {
   @extend %text-decor-none;
   color: $secondary-color;
+  font-weight: $font-wt--medium;
 }
 
+.card {
+    @include center(90%);
+    padding-top: em(40px);
+
+    p {
+      margin-bottom: em(40px);
+    }
+}
+
+
 .blockquote {
-  @include center(80%);
+  @extend %margin-auto;
   display: block;
-  font-size: em(24px);
+  width: 85%;
+  font-size: em(25px);
+  line-height: em(25px);
   font-style: italic;
-  border-left: 8px solid $primary-color;
+  border-left: 9px solid $primary-color;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  padding: 0 10px;
-  margin: 20px;
+  padding-left: em(14px);
+  margin-top: em(-10px);
+  margin-bottom: em(60px);
 }
 
 .headline {
-  &-primary {
+  @include m(primary) {
     @extend %headline-prim;
   }
 
-  &-secondary {
-    }
-
+  @include m(secondary){
+    @extend %headline-sec;
+  }
 }

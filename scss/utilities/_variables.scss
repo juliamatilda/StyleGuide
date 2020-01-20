@@ -15,7 +15,7 @@ $font-wt--ultra-bold: 900;
 //======================== COLORS ==========================//
 //----- Descriptive Base Colors -----//
 $black           : #000;
-$gray            : #404040;
+$grey            : #404040;
 $white           : #fff;
 
 $viking          : #58e1c1; //main
@@ -40,16 +40,21 @@ $secondary-color   : $malibu;
 //----- COLOR MAPS -----//
 //----- Grid Theme Colors -----//
 $grid-colors: (
-    '3' :$french-lilac,    //grid__col--3
-    '4' :$anakiwa,         //grid__col--4
-    '5' :$vista-blue,      //grid__col--5
-    '6' :$shakespeare,     //grid__col--6
-    '7' :$sea-pink,        //grid__col--7
-    '8' :$vivid-tangerine, //grid__col--8
-    '12':$riptide          //grid__col--12
+    $emerald,         //grid__col--1
+    $malibu,          //grid__col--2
+    $french-lilac,    //grid__col--3
+    $anakiwa,         //grid__col--4
+    $vista-blue,      //grid__col--5
+    $shakespeare,     //grid__col--6
+    $sea-pink,        //grid__col--7
+    $vivid-tangerine, //grid__col--8
+    $coral,           //grid__col--9
+    $sunglo,          //grid__col--10
+    $purple-majesty,  //grid__col--11
+    $riptide          //grid__col--12
 );
 
-//----- Btn Colors -----//
+//----- Button Colors -----//
 $btn-colors: (
     success    : $emerald,
     error      : $sunglo,
@@ -58,12 +63,24 @@ $btn-colors: (
     default    : $malibu
 );
 
+//----- Color Palette Modifiers -----//
+$color-palettes: (
+  grey: (
+    xx-light: lighten($grey, 50%),
+    x-light : lighten($grey, 20%),
+    light   : lighten($grey, 10%),
+    base    : $grey,
+    dark    : darken($grey, 10%),
+    x-dark  : darken($grey, 30%),
+  )
+);
+
+
+
 //==================================================================//
 
 //----- Text -----//
-$base__font-size : 16px;
-$base__line-height : 24px;
-
+$base__font-size : 18px;
 
 //----- Grid -----//
 $g-col-width   : 65px;

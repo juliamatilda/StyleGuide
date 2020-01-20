@@ -2,10 +2,12 @@
 .btn {
   @include m(default){
     margin-top: em(30px);
+
   }
   @each $theme, $color in $btn-colors {
     &--#{$theme}.theme__colors {
-      background-color: $color;
+      background: $color;
+      margin-bottom: em(25px);
     }
   }
 }
@@ -13,4 +15,8 @@
 //extend btn styles
 [class^="btn--"] {
   @extend %btn;
+
+  &:nth-of-type(1){
+    margin-top: em(50px);
+  }
 }

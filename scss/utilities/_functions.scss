@@ -16,3 +16,8 @@
   $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
   @return $g-context;
 }
+
+//----- Call the Color Palette Modifiers -----//
+@function palette($palette, $shade: 'base'){
+	@return map-get(map-get($color-palettes, $palette), $shade);
+}
