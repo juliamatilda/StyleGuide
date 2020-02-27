@@ -5,56 +5,102 @@
   font-weight: $font-wt--light;
   font-size: $base__font-size;
   color: palette(grey, x-light);
-}
 
-.grid__row {
-  &:nth-of-type(5){
-  padding-bottom: em(10px);
+  @include media(medium){
+     @include center(80%);
+     font-size: em(18px);
   }
 
-  &:nth-of-type(6){
-  margin-top: em(20px);
-  }
 }
+
 
 //grid system
 @for $i from 1 through $g-col-count {
   .grid__col--#{$i}.theme__colors {
     @include grid;
-    //margin: 0 em(5px) em(50px);
+    margin: 0 em(5px) em(50px);
     &:last-of-type {
       margin-bottom: em(50px);
     }
         //margin grid system
         @include media(small){
            margin-bottom: em(6px);
-          //  &:last-child {
-          //    margin-bottom: em(40px);
-          //
-          // }
         }
-    }
+
+
+     }
   }
 
 
-.grid {
-
-  //background color for grid columns
-  @include e(col){
-    @include grid-bg-color;
-
+@include media(small) {
+ .grid__row {
+   &:nth-of-type(5){
+    padding-bottom: em(10px);
+   }
+   &:nth-of-type(6){
+    margin-top: em(20px);
+   }
   }
-
- @include e(row){
-
-
- }
 }
 
 
+//calculate grid columns max-width
+@include media(medium) {
+    @for $i from 1 through $g-col-count {
+      $context: g-context($g-col-width, $g-col-count, $g-gutter-width);
+      $target: ($g-col-width * $i)  +  ($g-gutter-width * ($i - 1));
+
+     //column modifier classes
+        .grid__col--#{$i}{
+            width: percentage($target, $context);
+        }
+    }
+}
+
+//grid__row flex layout - medium width
+.grid {
+ @include media(medium){
+   @include e(row){
+     @include flexbox($justify: space-between);
+     .centered {
+       margin: auto;
+       display: block;
+      }
+
+    //grid__row buttons width
+    &:nth-of-type(5){
+      @include center(95%);
+      margin-top: em(20px);
+      margin-bottom: em(60px);
+    }
+
+    &:nth-of-type(4){
+      margin-bottom: em(20px);
+
+    }
+  }
+ }
+  //background color for grid columns
+  @include e(col){
+    @include grid-bg-color;
+  }
+}
 
 
+//grid for buttons - medium width
+.grid__col {
+    @include media(medium) {
+        @include m(12) {
+            .theme__colors {
+              margin: em(20px);
 
+              @include media(large) {
+                margin-left: 3.5%;
+              }
+            }
 
-// .centered {}
-// .theme__colors {}
+            @include flexbox();
+        }
+    }
+
+}

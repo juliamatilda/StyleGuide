@@ -4,21 +4,40 @@
   @extend %margin-auto;
     display: block;
     padding: em(45px) 0;
+
+    @include media(medium){
+      padding-left: em(80px);
+    }
   }
+
 
   @include m(frame){
     @extend %margin-auto;
     display: block;
-    padding: em(15px);
+    padding: em(12px);
     border: solid 1px palette(grey, xx-light);
-    width: 90%;
-    margin-top: em(60px);
+    width: 95%;
+    margin-top: em(40px);
     margin-bottom: em(30px);
+
+    @include media(medium){
+      width:75%;
+    }
   }
 
   @include m(avatar){
     @extend %margin-auto;
-      display: block;
+     display: block;
 
+     @include media(medium){
+       width:33%;
+
+    }
+  }
+}
+
+.grid__col {
+  @include m(6){
+    margin: auto;
   }
 }

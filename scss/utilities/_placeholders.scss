@@ -18,14 +18,24 @@
   font-weight: $font-wt--bold;
   font-size: em(32px);
   line-height: (36px/32px);
-  margin: 0 0 em(20px) em(15px);
+  margin: 0 0 em(20px) em(24px);
 }
 
 %headline-sec {
   font-weight: $font-wt--thin;
   color: palette(grey, xx-light);
-  margin: em(40px) 0 0 em(15px);
+  margin: em(40px) 0 0 em(24px);
   padding-bottom: em(20px);
+  &:nth-child(n+3){
+   margin-left: em(12px);
+  }
+  &:nth-child(n+5){
+   padding-bottom: em(30px);
+  }
+
+  @include media(large){
+    font-size: em(18px);
+  }
 }
 
 //----- Navigation ------//
@@ -47,8 +57,15 @@
   color: $white;
   border: none;
   border-radius: 5px;
-  @include flexbox($direction: column, $align: center){
+  @include flexbox($direction: column, $align: center);
+
+  @include media(medium){
+    padding: em(15px) 0;
+    font-size: em(16px);
   }
 
 
+  @include media(large){
+    font-weight: $font-wt--bold;
+  }
 }

@@ -53,6 +53,7 @@
 
 //----- Grid Style -----//
 @mixin grid {
+
   @include flexbox;
   border-radius: 5px;
   border: none;
@@ -60,6 +61,10 @@
   color: palette(grey, x-light);;
   font-weight: $font-wt--medium;
   padding: em(15px) em(13px) em(15px);
+  @include media(medium){
+    display: block;
+    text-align: center;
+  }
   @content;
 }
 

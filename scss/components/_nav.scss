@@ -1,7 +1,12 @@
 
 .nav {
   @extend %text-center;
-  margin-bottom: em(80px);
+  @include center(95%);
+  @include media(medium){
+    @include flexbox($direction: row, $justify: space-around);
+    width: 60%;
+    margin: em(60px) 0 0 em(180px);
+  }
 
   @include e(item) {
     a {
@@ -9,40 +14,15 @@
        display: block;
        padding: em(16px);
        color: lighten($black, 40%);
+
        &:active,
        &:hover {
          @extend %nav-item-on;
        }
      }
+      &:last-child {
+       margin-bottom: 60px;
+     }
+
     }
 }
-
-
-
-
-
-
-
-
-
-//
-// .nav {
-//   @include e(item) {
-//     @include flexbox($direction: column, $justifyContent: center);
-//     @extend %text-center;
-//
-//     a {
-//       @extend %text-decor-none;
-//        display: block;
-//        padding: em(16px);
-//        color: $gray;
-//        &:active,
-//        &:hover {
-//          background-color: $primary-color;
-//          border: 1px solid $primary-color;
-//          border-radius: 5px;
-//          color: $white;
-//        }
-//      }
-//     }
-// }

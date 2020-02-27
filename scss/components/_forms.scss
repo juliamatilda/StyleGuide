@@ -12,9 +12,31 @@
       border-bottom: em(6px) solid $primary-color;
       padding: em(12px);
       outline: none;
+      @include media(medium){
+        @include center(85%);
+        max-width: 300px;
+        font-size: 15px;
+        padding: em(17px);
       }
+    }
+    img {
+      @include media(large){
+      width: 50%;
+      }
+    }
+
+    button {
+      @include media(medium){
+        max-width: 320px;
+
+      }
+    }
 
     .headline--secondary {
       padding-left: em(20px);
+    }
+
+    @include media(medium){
+      padding-top: em(40px);
     }
 }

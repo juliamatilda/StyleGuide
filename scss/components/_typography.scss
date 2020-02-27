@@ -1,9 +1,4 @@
 
-.container {
-}
-
-
-
 .link {
   @extend %text-decor-none;
   color: $secondary-color;
@@ -15,7 +10,7 @@
     padding-top: em(40px);
 
     p {
-      margin-bottom: em(40px);
+      margin-bottom: em(45px);
     }
 }
 
@@ -28,11 +23,15 @@
   line-height: em(25px);
   font-style: italic;
   border-left: 9px solid $primary-color;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  padding-left: em(14px);
+  border-top-left-radius: em(5px);
+  border-bottom-left-radius: em(5px);
+  padding-left: em(20px);
   margin-top: em(-10px);
   margin-bottom: em(60px);
+  @include media(medium){
+    width: 90%;
+    padding-left: em(28px);
+  }
 }
 
 .headline {
@@ -40,7 +39,8 @@
     @extend %headline-prim;
   }
 
-  @include m(secondary){
+   @include m(secondary){
     @extend %headline-sec;
-  }
-}
+
+   }
+ }
