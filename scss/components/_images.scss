@@ -2,7 +2,6 @@
 .img {
   @include m(logo){
   @extend %margin-auto;
-    display: block;
     padding: em(45px) 0;
 
     @include media(medium){
@@ -13,12 +12,11 @@
 
   @include m(frame){
     @extend %margin-auto;
-    display: block;
     padding: em(12px);
     border: solid 1px palette(grey, xx-light);
     width: 95%;
-    margin-top: em(40px);
-    margin-bottom: em(30px);
+    //margin-top: em(30px);
+    //margin-bottom: em(30px);
 
     @include media(medium){
       width:75%;
@@ -27,17 +25,15 @@
 
   @include m(avatar){
     @extend %margin-auto;
-     display: block;
-
      @include media(medium){
        width:33%;
-
-    }
+     }
   }
 }
 
+//margin auto for larger screens
 .grid__col {
   @include m(6){
-    margin: auto;
+    margin: auto 0;
   }
 }
