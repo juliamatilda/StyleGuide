@@ -29,19 +29,6 @@
       }
   }
 
-
-@include media(small) {
- .grid__row {
-   &:nth-of-type(5){
-    padding-bottom: em(10px);
-   }
-   &:nth-of-type(6){
-    margin-top: em(20px);
-   }
-  }
-}
-
-
 //calculate grid columns max-width
 @include media(medium) {
     @for $i from 1 through $g-col-count {
@@ -74,7 +61,10 @@
 
     &:nth-of-type(4){
       margin-bottom: em(20px);
+    }
 
+    &:nth-child(n+6){
+      @include center(98%);
     }
   }
  }
@@ -96,9 +86,19 @@
                 margin-left: 3.5%;
               }
             }
-
-            @include flexbox();
+             @include flexbox();
         }
     }
+}
 
+//layout fixes grid__row small width
+@include media(small) {
+ .grid__row {
+   &:nth-of-type(5){
+    padding-bottom: em(10px);
+   }
+   &:nth-of-type(6){
+    margin-top: em(20px);
+   }
+  }
 }

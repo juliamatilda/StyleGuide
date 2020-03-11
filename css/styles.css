@@ -22,14 +22,13 @@
 .headline--secondary {
   font-weight: 100;
   color: silver;
-  margin: 2.2222222222em 0 0 1.3333333333em;
+  margin: 2.2222222222em 0 0 0.6666666667em;
   padding-bottom: 1.1111111111em;
 }
-.headline--secondary:nth-child(n+3) {
-  margin-left: 0.6666666667em;
-}
 .headline--secondary:nth-child(n+5) {
-  padding-bottom: 1.6666666667em;
+  padding-top: 2.7777777778em;
+  padding-bottom: 2.2222222222em;
+  margin-top: 0;
 }
 @media (min-width: 1100px) {
   .headline--secondary {
@@ -440,6 +439,11 @@ p {
   padding: 0.6666666667em;
   outline: none;
 }
+@media (min-width: 1px) and (max-width: 768px) {
+  .form__input {
+    font-size: 0.8333333333em;
+  }
+}
 @media (min-width: 769px) {
   .form__input {
     width: 85%;
@@ -489,6 +493,15 @@ p {
   margin-bottom: 60px;
 }
 
+#images.headline--secondary {
+  padding-bottom: 2.7777777778em;
+}
+@media (min-width: 769px) {
+  #images.headline--secondary {
+    margin-top: 0;
+  }
+}
+
 .img--logo {
   padding: 2.5em 0;
 }
@@ -501,6 +514,11 @@ p {
   padding: 0.6666666667em;
   border: solid 1px silver;
   width: 95%;
+}
+@media (min-width: 1px) and (max-width: 768px) {
+  .img--frame {
+    margin-bottom: 1.6666666667em;
+  }
 }
 @media (min-width: 769px) {
   .img--frame {
@@ -833,14 +851,6 @@ p {
   }
 }
 
-@media (min-width: 1px) and (max-width: 768px) {
-  .grid__row:nth-of-type(5) {
-    padding-bottom: 0.5555555556em;
-  }
-  .grid__row:nth-of-type(6) {
-    margin-top: 1.1111111111em;
-  }
-}
 @media (min-width: 769px) {
   .grid__col--1 {
     width: 6.5%;
@@ -908,6 +918,10 @@ p {
   .grid__row:nth-of-type(4) {
     margin-bottom: 1.1111111111em;
   }
+  .grid__row:nth-child(n+6) {
+    width: 98%;
+    margin: 0 auto;
+  }
 }
 .grid__col--1.theme__colors {
   background-color: #63CC82;
@@ -960,6 +974,14 @@ p {
   }
 }
 
+@media (min-width: 1px) and (max-width: 768px) {
+  .grid__row:nth-of-type(5) {
+    padding-bottom: 0.5555555556em;
+  }
+  .grid__row:nth-of-type(6) {
+    margin-top: 1.1111111111em;
+  }
+}
 .btn--default {
   margin-top: 1.6666666667em;
 }
@@ -1013,6 +1035,7 @@ p {
 }
 @media (min-width: 769px) {
   .blockquote {
+    margin-top: 1.1111111111em;
     width: 90%;
     padding-left: 1.5555555556em;
   }

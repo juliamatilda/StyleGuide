@@ -29,6 +29,7 @@
   margin-top: em(-10px);
   margin-bottom: em(60px);
   @include media(medium){
+    margin-top: em(20px);
     width: 90%;
     padding-left: em(28px);
   }
@@ -41,6 +42,5 @@
 
    @include m(secondary){
     @extend %headline-sec;
-
    }
  }

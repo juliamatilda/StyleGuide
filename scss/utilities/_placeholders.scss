@@ -25,16 +25,16 @@
 %headline-sec {
   font-weight: $font-wt--thin;
   color: palette(grey, xx-light);
-  margin: em(40px) 0 0 em(24px);
+  margin: em(40px) 0 0 em(12px);
   padding-bottom: em(20px);
-  &:nth-child(n+3){
-   margin-left: em(12px);
-  }
-  &:nth-child(n+5){
-   padding-bottom: em(30px);
-  }
 
-  @include media(large){
+  &:nth-child(n+5){
+   padding-top: em(50px);
+   padding-bottom: em(40px);
+   margin-top: 0;
+   }
+
+   @include media(large){
     font-size: em(18px);
   }
 }
